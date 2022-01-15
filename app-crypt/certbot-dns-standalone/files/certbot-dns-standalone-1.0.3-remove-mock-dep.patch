@@ -1,0 +1,11 @@
+diff -Naur A/setup.py B/setup.py
+--- A/setup.py	2022-01-15 22:44:42.949228013 +0100
++++ B/setup.py	2022-01-15 22:44:57.232308366 +0100
+@@ -12,7 +12,6 @@
+     'acme>=0.21.1',
+     'certbot>=0.21.1',
+     'dnslib>=0.9.0',
+-    'mock',
+     'setuptools',
+     'zope.interface',
+ ]
