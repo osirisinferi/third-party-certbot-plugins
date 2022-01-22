@@ -1,0 +1,13 @@
+diff -Naur A/setup.py B/setup.py
+--- A/setup.py	2022-01-22 22:35:18.300554348 +0100
++++ B/setup.py	2022-01-22 22:35:35.708555754 +0100
+@@ -2,8 +2,7 @@
+ 
+ import certbot_dns_duckdns
+ 
+-with open("Readme.md") as f:
+-    long_description = f.read()
++long_description = ""
+ 
+ setup(
+     name="certbot_dns_duckdns",
