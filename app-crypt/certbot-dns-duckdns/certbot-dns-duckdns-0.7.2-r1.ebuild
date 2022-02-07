@@ -31,5 +31,7 @@ S="${WORKDIR}/${MY_PN}-${PV}"
 
 src_prepare() {
 	default
-	rm -r "${S}/tests"
+	cd "${S}"
+	rm -r tests
+	sed -i "s/requests~=2.26.0/requests~=2.26/" setup.py certbot_dns_duckdns.egg-info/requires.txt
 }
