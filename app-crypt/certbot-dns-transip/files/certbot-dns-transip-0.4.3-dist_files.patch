@@ -1,0 +1,19 @@
+diff -Naur a/setup.py b/setup.py
+--- a/setup.py	2022-02-13 12:21:34.887630225 +0100
++++ b/setup.py	2022-02-13 12:22:36.516807919 +0100
+@@ -49,15 +49,4 @@
+     ],
+     test_suite='tests',
+     tests_require=test_requirements,
+-    data_files=[
+-        ('', [
+-            '.VERSION',
+-            'LICENSE',
+-            'AUTHORS.rst',
+-            'CONTRIBUTING.rst',
+-            'HISTORY.rst',
+-            'README.rst',
+-            'USAGE.rst',
+-        ]),
+-    ]
+ )
