@@ -34,4 +34,5 @@ src_prepare() {
 	cd "${S}"
 	rm -r tests
 	sed -i "s/requests~=2.26.0/requests~=2.26/" setup.py certbot_dns_duckdns.egg-info/requires.txt
+	sed -i "s/dnspython~=2.1.0/dnspython~=2.1/" setup.py certbot_dns_duckdns.egg-info/requires.txt
 }
