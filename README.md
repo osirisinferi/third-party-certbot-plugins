@@ -1,7 +1,6 @@
 
 # OsirisInferis overlay for third party plugins of the ACME client [certbot](https://github.com/certbot/certbot/)
 [![pkgcheck](https://github.com/osirisinferi/third-party-certbot-plugins/workflows/pkgcheck/badge.svg)](https://github.com/osirisinferi/third-party-certbot-plugins/actions?query=workflow%3Apkgcheck)
-[![repoman](https://github.com/osirisinferi/third-party-certbot-plugins/workflows/repoman/badge.svg)](https://github.com/osirisinferi/third-party-certbot-plugins/actions?query=workflow%3Arepoman)
 [![ci](https://github.com/osirisinferi/third-party-certbot-plugins/actions/workflows/ci.yml/badge.svg)](https://github.com/osirisinferi/third-party-certbot-plugins/actions/workflows/ci.yml)
 
 ## Description
