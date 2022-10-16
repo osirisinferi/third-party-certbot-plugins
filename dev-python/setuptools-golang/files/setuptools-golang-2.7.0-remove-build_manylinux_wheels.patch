@@ -1,0 +1,84 @@
+diff --git a/setup.cfg b/setup.cfg
+index 69b7082..2617168 100644
+--- a/setup.cfg
++++ b/setup.cfg
+@@ -25,8 +25,6 @@ py_modules = setuptools_golang
+ python_requires = >=3.6.1
+ 
+ [options.entry_points]
+-console_scripts = 
+-	setuptools-golang-build-manylinux-wheels = setuptools_golang:build_manylinux_wheels
+ distutils.setup_keywords = 
+ 	build_golang = setuptools_golang:set_build_ext
+ 
+diff --git a/setuptools_golang.egg-info/entry_points.txt b/setuptools_golang.egg-info/entry_points.txt
+index 09f39fb..4ccdcba 100644
+--- a/setuptools_golang.egg-info/entry_points.txt
++++ b/setuptools_golang.egg-info/entry_points.txt
+@@ -1,6 +1,3 @@
+-[console_scripts]
+-setuptools-golang-build-manylinux-wheels = setuptools_golang:build_manylinux_wheels
+-
+ [distutils.setup_keywords]
+ build_golang = setuptools_golang:set_build_ext
+ 
+diff --git a/setuptools_golang.py b/setuptools_golang.py
+index a30e0c9..1af81d6 100644
+--- a/setuptools_golang.py
++++ b/setuptools_golang.py
+@@ -191,55 +191,3 @@ def set_build_ext(
+ ) -> None:
+     base = dist.cmdclass.get('build_ext', _build_ext)
+     dist.cmdclass['build_ext'] = _get_build_ext_cls(base, **value)
+-
+-
+-GOLANG = 'https://storage.googleapis.com/golang/go{}.linux-amd64.tar.gz'
+-SCRIPT = '''\
+-cd /tmp
+-curl {golang} --silent --location | tar -xz
+-export PATH="/tmp/go/bin:$PATH" HOME=/tmp
+-for py in {pythons}; do
+-    "/opt/python/$py/bin/pip" wheel --no-deps --wheel-dir /tmp /dist/*.tar.gz
+-done
+-ls *.whl | xargs -n1 --verbose auditwheel repair --wheel-dir /dist
+-ls -al /dist
+-'''
+-
+-
+-def build_manylinux_wheels(
+-        argv: Optional[Sequence[str]] = None,
+-) -> int:  # pragma: no cover
+-    parser = argparse.ArgumentParser()
+-    parser.add_argument(
+-        '--golang', default='1.17.1',
+-        help='Override golang version (default %(default)s)',
+-    )
+-    parser.add_argument(
+-        '--pythons', default='cp36-cp36m',
+-        help='Override pythons to build (default %(default)s)',
+-    )
+-    args = parser.parse_args(argv)
+-
+-    golang = GOLANG.format(args.golang)
+-    pythons = ' '.join(args.pythons.split(','))
+-
+-    assert os.path.exists('setup.py')
+-    if os.path.exists('dist'):
+-        shutil.rmtree('dist')
+-    os.makedirs('dist')
+-    _check_call(('python', 'setup.py', 'sdist'), cwd='.', env={})
+-    _check_call(
+-        (
+-            'docker', 'run', '--rm',
+-            '--volume', f'{os.path.abspath("dist")}:/dist:rw',
+-            '--user', f'{os.getuid()}:{os.getgid()}',
+-            'quay.io/pypa/manylinux1_x86_64:latest',
+-            'bash', '-o', 'pipefail', '-euxc',
+-            SCRIPT.format(golang=golang, pythons=pythons),
+-        ),
+-        cwd='.', env={},
+-    )
+-    print('*' * 79)
+-    print('Your wheels have been built into ./dist')
+-    print('*' * 79)
+-    return 0

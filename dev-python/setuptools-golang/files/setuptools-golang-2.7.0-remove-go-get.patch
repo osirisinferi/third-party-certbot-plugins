@@ -1,0 +1,13 @@
+diff --git a/setuptools_golang.py b/setuptools_golang.py
+index 02cf980..0a946b7 100644
+--- a/setuptools_golang.py
++++ b/setuptools_golang.py
+@@ -149,8 +149,6 @@ def _get_build_extension_method(
+ 
+             gopath = os.environ.get('SETUPTOOLS_GOLANG_GOPATH', tempdir)
+             env = {'GOPATH': gopath}
+-            cmd_get = ('go', 'get', '-d')
+-            _check_call(cmd_get, cwd=pkg_path, env=env)
+ 
+             env.update({
+                 'CGO_CFLAGS': _get_cflags(
