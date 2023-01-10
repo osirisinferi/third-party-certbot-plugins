@@ -20,8 +20,7 @@ KEYWORDS="~amd64 ~x86"
 RDEPEND="
 	>=app-crypt/certbot-0.16.0[${PYTHON_USEDEP}]
 	>=app-crypt/acme-0.16.0[${PYTHON_USEDEP}]
-	>=dev-python/zope-interface-4.4.2[${PYTHON_USEDEP}]
-	~dev-python/transip-0.5.0[${PYTHON_USEDEP}]
+	~dev-python/transip-0.6.0[${PYTHON_USEDEP}]
 "
 
 S="${WORKDIR}/${MY_PN}-${PV}"
