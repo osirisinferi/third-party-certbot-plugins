@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>gentoo@flut.nl.eu.org</email>
+		<name>Osiris Inferi</name>
+	</maintainer>
+	<upstream>
+		<maintainer>
+			<email>gvormayr@gmail.com</email>
+			<name>Gernot Vormayr</name>
+		</maintainer>
+		<remote-id type="github">notti/fnfqueue</remote-id>
+		<remote-id type="pypi">fnfqueue</remote-id>
+	</upstream>
+</pkgmetadata>
