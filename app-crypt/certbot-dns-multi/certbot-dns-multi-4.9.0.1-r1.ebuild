@@ -40,5 +40,6 @@ src_prepare() {
 
 python_install() {
 	rm -r "${BUILD_DIR}/lib/${PN//-/_}/_internal/bridge/" || die
+	rm -r "${BUILD_DIR}/lib/"*.h || die
 	distutils-r1_python_install
 }
