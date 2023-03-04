@@ -25,7 +25,7 @@ S="${WORKDIR}/${PN}-${MY_PV}"
 
 DEPEND="
 	dev-python/setuptools
-	>=dev-python/setuptools_scm-7.0.5
+	>=dev-python/setuptools-scm-7.0.5
 	dev-python/setuptools-golang
 	>=dev-lang/go-1.19.0
 	>=app-crypt/certbot-1.12.0
