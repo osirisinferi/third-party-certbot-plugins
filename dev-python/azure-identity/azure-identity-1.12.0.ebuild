@@ -15,9 +15,9 @@ KEYWORDS="~amd64 ~x86"
 LICENSE="MIT"
 SLOT="0"
 
-RDEPEND=">=dev-python/azure-core-1.18.0[${PYTHON_USEDEP}]
+RDEPEND=">=dev-python/azure-core-1.11.0[${PYTHON_USEDEP}]
 	>=dev-python/six-1.12.0[${PYTHON_USEDEP}]
-	>=dev-python/msal-1.16.0[${PYTHON_USEDEP}]
+	>=dev-python/msal-1.20.0[${PYTHON_USEDEP}]
 	>=dev-python/msal-extensions-0.3.0[${PYTHON_USEDEP}]
 	>=dev-python/cryptography-2.5.0[${PYTHON_USEDEP}]"
 
