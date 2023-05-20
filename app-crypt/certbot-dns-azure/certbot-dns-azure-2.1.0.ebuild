@@ -16,10 +16,9 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
 RDEPEND="
-	>=app-crypt/certbot-1.1.0[${PYTHON_USEDEP}]
-	>=app-crypt/acme-0.29.0[${PYTHON_USEDEP}]
-	dev-python/zope-interface[${PYTHON_USEDEP}]
-	>=dev-python/setuptools-39.0.1[${PYTHON_USEDEP}]
-	>=dev-python/azure-identity-1.5.0[${PYTHON_USEDEP}]
+	>=app-crypt/certbot-2.0.0[${PYTHON_USEDEP}]
+	>=app-crypt/acme-2.0.0[${PYTHON_USEDEP}]
+	>=dev-python/setuptools-41.6.0[${PYTHON_USEDEP}]
+	>=dev-python/azure-identity-1.11.0[${PYTHON_USEDEP}]
 	>=dev-python/azure-mgmt-dns-8.0.0[${PYTHON_USEDEP}]
 "
