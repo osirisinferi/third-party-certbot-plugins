@@ -19,10 +19,8 @@ KEYWORDS="~amd64 ~x86"
 RESTRICT="test"
 
 RDEPEND="
-	>=app-crypt/certbot-0.21.1[${PYTHON_USEDEP}]
-	dev-python/zope-interface[${PYTHON_USEDEP}]
+	>=app-crypt/certbot-2.0.0[${PYTHON_USEDEP}]
 	dev-python/setuptools[${PYTHON_USEDEP}]
-	>=dev-python/dns-lexicon-3.7.1[${PYTHON_USEDEP}]
 	>=dev-python/requests-2.28.0[${PYTHON_USEDEP}]
 "
 
