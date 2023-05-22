@@ -3,13 +3,13 @@
 
 EAPI=8
 
+DISTUTILS_USE_PEP517=setuptools
 PYTHON_COMPAT=( python3_{10..11} )
 
-inherit distutils-r1
+inherit distutils-r1 pypi
 
 DESCRIPTION="AutoRest swagger generator Python client runtime. Azure-specific module"
 HOMEPAGE="https://pypi.org/project/msrestazure"
-SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 KEYWORDS="~amd64 ~x86"
 LICENSE="MIT"
@@ -19,5 +19,4 @@ RESTRICT="test"
 RDEPEND=">=dev-python/adal-1.2.7[${PYTHON_USEDEP}]
 	>=dev-python/msrest-0.6.21[${PYTHON_USEDEP}]"
 
-DEPEND="${RDEPEND}
-	dev-python/setuptools[${PYTHON_USEDEP}]"
+DEPEND="${RDEPEND}"
