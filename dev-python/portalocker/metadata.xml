@@ -6,7 +6,7 @@
 		<name>Osiris Inferi</name>
 	</maintainer>
 	<upstream>
-		<remote-id type="pypi">portalocker</remote-id>
+		<remote-id type="github">WoLpH/portalocker</remote-id>
 	</upstream>
 </pkgmetadata>
 

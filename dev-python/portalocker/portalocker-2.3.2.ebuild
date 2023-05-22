@@ -3,13 +3,14 @@
 
 EAPI=8
 
+DISTUTILS_USE_PEP517=setuptools
 PYTHON_COMPAT=( python3_{10..11} )
 
 inherit distutils-r1
 
 DESCRIPTION="Library to provide an easy API to file locking"
 HOMEPAGE="https://github.com/WoLpH/portalocker"
-SRC_URI="https://github.com/WoLpH/portalocker/archive/v${PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://github.com/WoLpH/portalocker/archive/v${PV}.tar.gz -> ${P}.gh.tar.gz"
 
 LICENSE="PSF-2"
 SLOT="0"
@@ -19,7 +20,6 @@ RESTRICT="test"
 
 RDEPEND=""
 DEPEND="${RDEPEND}
-	dev-python/setuptools[${PYTHON_USEDEP}]
 	doc? ( dev-python/sphinx[${PYTHON_USEDEP}] )"
 
 python_compile_all() {
