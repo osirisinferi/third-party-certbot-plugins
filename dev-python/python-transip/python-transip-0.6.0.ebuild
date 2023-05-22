@@ -3,15 +3,14 @@
 
 EAPI=8
 
+DISTUTILS_USE_PEP517=setuptools
+PYPI_NO_NORMALIZE=1
 PYTHON_COMPAT=( python3_{10..11} )
 
-inherit distutils-r1
-
-MY_PN="python-${PN}"
+inherit distutils-r1 pypi
 
 DESCRIPTION="Python wrapper for the TransIP REST API V6"
 HOMEPAGE="https://pypi.org/project/python-transip/ https://github.com/roaldnefs/python-transip"
-SRC_URI="mirror://pypi/${MY_PN:0:1}/${MY_PN}/${MY_PN}-${PV}.tar.gz"
 
 LICENSE="LGPL-3"
 SLOT="0"
@@ -21,8 +20,6 @@ RDEPEND="
 	>=dev-python/cryptography-3.3.1[${PYTHON_USEDEP}]
 	>=dev-python/requests-2.25.1[${PYTHON_USEDEP}]
 "
-
-S="${WORKDIR}/${MY_PN}-${PV}"
 
 src_prepare() {
 	default
