@@ -3,15 +3,17 @@
 
 EAPI=8
 
+DISTUTILS_USE_PEP517=setuptools
+PYPI_NO_NORMALIZE=1
 PYTHON_COMPAT=( python3_{10..11} )
 
-inherit distutils-r1
+inherit distutils-r1 pypi
 
 MY_P="${P/_/}"
 
 DESCRIPTION="Microsoft Azure DNS Management Client Library for Python"
 HOMEPAGE="https://pypi.org/project/azure-mgmt-dns"
-SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${MY_P}.zip"
+SRC_URI=$(pypi_sdist_url --no-normalize "${PN}" "${PV}" .zip)
 
 KEYWORDS="~amd64 ~x86"
 LICENSE="MIT"
@@ -23,11 +25,6 @@ RDEPEND=">=dev-python/msrestazure-0.6.4[${PYTHON_USEDEP}]
 
 BDEPEND="app-arch/unzip"
 
-DEPEND="${RDEPEND}
-	dev-python/setuptools[${PYTHON_USEDEP}]"
+DEPEND="${RDEPEND}"
 
 RESTRICT="test"
-# There is no specific release of
-# https://github.com/Azure/azure-sdk-for-python/tree/main/tools/azure-sdk-tools/devtools_testutils
-
-#distutils_enable_tests pytest
