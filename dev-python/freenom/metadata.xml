@@ -6,6 +6,7 @@
 		<name>Osiris Inferi</name>
 	</maintainer>
 	<upstream>
+		<remote-id type="pypi">freenom</remote-id>
 		<remote-id type="github">Shm013/freenom-dns</remote-id>
 	</upstream>
 </pkgmetadata>
