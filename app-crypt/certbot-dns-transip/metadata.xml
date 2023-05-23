@@ -6,6 +6,7 @@
 		<name>Osiris Inferi</name>
 	</maintainer>
 	<upstream>
+		<remote-id type="pypi">certbot-dns-transip</remote-id>
 		<remote-id type="github">hsmade/certbot-dns-transip</remote-id>
 	</upstream>
 </pkgmetadata>
