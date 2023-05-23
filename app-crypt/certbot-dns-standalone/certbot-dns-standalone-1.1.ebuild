@@ -3,15 +3,14 @@
 
 EAPI=8
 
+DISTUTILS_USE_PEP517=setuptools
+PYPI_NO_NORMALIZE=1
 PYTHON_COMPAT=( python3_{10..11} )
 
-DISTUTILS_USE_SETUPTOOLS=rdepend
-
-inherit distutils-r1
+inherit distutils-r1 pypi
 
 DESCRIPTION="Standalone DNS Authenticator plugin for Certbot"
 HOMEPAGE="https://pypi.org/project/certbot-dns-standalone/ https://github.com/siilike/certbot-dns-standalone"
-SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
@@ -22,7 +21,6 @@ PATCHES="${FILESDIR}/${PN}-remove-mock-dep.patch"
 RDEPEND="
 	>=app-crypt/certbot-2.1.0[${PYTHON_USEDEP}]
 	>=app-crypt/acme-0.21.1[${PYTHON_USEDEP}]
-	dev-python/setuptools[${PYTHON_USEDEP}]
 	>=dev-python/dnslib-0.9.0[${PYTHON_USEDEP}]
 "
 

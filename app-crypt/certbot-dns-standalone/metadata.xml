@@ -7,5 +7,6 @@
 	</maintainer>
 	<upstream>
 		<remote-id type="pypi">certbot-dns-standalone</remote-id>
+		<remote-id type="github">siilike/certbot-dns-standalone</remote-id>
 	</upstream>
 </pkgmetadata>
