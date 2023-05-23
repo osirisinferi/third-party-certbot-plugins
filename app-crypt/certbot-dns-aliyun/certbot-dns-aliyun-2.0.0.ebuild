@@ -3,15 +3,16 @@
 
 EAPI=8
 
+DISTUTILS_USE_PEP517=setuptools
+PYPI_NO_NORMALIZE=1
 PYTHON_COMPAT=( python3_{10..11} )
 
-inherit distutils-r1
+inherit distutils-r1 pypi
 
 MY_PN=${PN//-/_}
 
 DESCRIPTION="Aliyun DNS Authenticator plugin for Certbot"
 HOMEPAGE="https://pypi.org/project/certbot-dns-aliyun/ https://github.com/tengattack/certbot-dns-aliyun"
-SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
@@ -20,11 +21,8 @@ RESTRICT="test"
 
 RDEPEND="
 	>=app-crypt/certbot-2.0.0[${PYTHON_USEDEP}]
-	dev-python/setuptools[${PYTHON_USEDEP}]
 	>=dev-python/requests-2.28.0[${PYTHON_USEDEP}]
 "
-
-#S="${WORKDIR}/${MY_PN}-${PV}"
 
 src_prepare() {
 	default

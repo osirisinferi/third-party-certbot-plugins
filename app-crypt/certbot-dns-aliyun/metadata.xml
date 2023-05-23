@@ -7,5 +7,6 @@
 	</maintainer>
 	<upstream>
 		<remote-id type="pypi">certbot-dns-duckdns</remote-id>
+		<remote-id type="github">tengattack/certbot-dns-aliyun</remote-id>
 	</upstream>
 </pkgmetadata>
