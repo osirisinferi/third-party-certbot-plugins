@@ -3,15 +3,15 @@
 
 EAPI=8
 
+DISTUTILS_USE_PEP517=setuptools
 PYTHON_COMPAT=( python3_{10..11} )
 
-inherit distutils-r1
+inherit distutils-r1 pypi
 
 MY_PN=${PN//-/_}
 
 DESCRIPTION="DuckDNS Authenticator plugin for Certbot"
 HOMEPAGE="https://pypi.org/project/certbot-dns-duckdns/ https://github.com/infinityofspace/certbot_dns_duckdns"
-SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${MY_PN}-${PV}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
@@ -22,12 +22,9 @@ PATCHES="${FILESDIR}/${PN}-remove-Readme.patch"
 
 RDEPEND="
 	>=app-crypt/certbot-1.18.0[${PYTHON_USEDEP}]
-	>=dev-python/setuptools-57.0.0[${PYTHON_USEDEP}]
 	>=dev-python/dnspython-2.2.0[${PYTHON_USEDEP}]
 	>=dev-python/requests-2.28.0[${PYTHON_USEDEP}]
 "
-
-S="${WORKDIR}/${MY_PN}-${PV}"
 
 src_prepare() {
 	default
