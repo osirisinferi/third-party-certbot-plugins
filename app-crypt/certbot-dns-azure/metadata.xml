@@ -7,5 +7,6 @@
 	</maintainer>
 	<upstream>
 		<remote-id type="pypi">certbot-dns-azure</remote-id>
+		<remote-id type="github">terrycain/certbot-dns-azure</remote-id>
 	</upstream>
 </pkgmetadata>
