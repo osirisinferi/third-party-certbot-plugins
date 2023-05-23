@@ -6,6 +6,7 @@
 		<name>Osiris Inferi</name>
 	</maintainer>
 	<upstream>
+		<remote-id type="pypi">certbot-standalone-nfq</remote-id>
 		<remote-id type="github">alexzorin/certbot-standalone-nfq</remote-id>
 	</upstream>
 </pkgmetadata>

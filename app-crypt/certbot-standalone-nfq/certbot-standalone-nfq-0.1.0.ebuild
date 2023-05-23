@@ -3,23 +3,19 @@
 
 EAPI=8
 
+DISTUTILS_USE_PEP517=setuptools
+PYPI_NO_NORMALIZE=1
 PYTHON_COMPAT=( python3_{10..11} )
 
-DISTUTILS_USE_PEP517=setuptools
-
-SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
-KEYWORDS="~amd64 ~x86"
-
-inherit distutils-r1 linux-info
+inherit distutils-r1 linux-info pypi
 
 DESCRIPTION="Authenticator plugin using NFQUEUE for Certbot (Let's Encrypt Client)"
 HOMEPAGE="https://github.com/alexzorin/certbot-standalone-nfq https://pypi.org/project/certbot-standalone-nfq/"
-
+KEYWORDS="~amd64 ~x86"
 LICENSE="GPL-2"
 SLOT="0"
 
 RDEPEND="
-	>=dev-python/setuptools-40.9.0[${PYTHON_USEDEP}]
 	>=dev-python/setuptools-scm-7.0.5[${PYTHON_USEDEP}]
 	>=app-crypt/certbot-1.25.0[${PYTHON_USEDEP}]
 	>=app-crypt/acme-1.25.0[${PYTHON_USEDEP}]
