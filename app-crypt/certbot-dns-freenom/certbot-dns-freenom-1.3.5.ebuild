@@ -3,11 +3,10 @@
 
 EAPI=8
 
+DISTUTILS_USE_PEP517=setuptools
 PYTHON_COMPAT=( python3_{10..11} )
 
-DISTUTILS_USE_SETUPTOOLS=rdepend
-
-SRC_URI="https://github.com/Shm013/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://github.com/Shm013/${PN}/archive/v${PV}.tar.gz -> ${P}.gh.tar.gz"
 KEYWORDS="~amd64 ~x86"
 
 inherit distutils-r1
