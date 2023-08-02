@@ -19,8 +19,10 @@ KEYWORDS="~amd64 ~x86"
 RDEPEND="
 	>=app-crypt/certbot-0.31.0[${PYTHON_USEDEP}]
 	>=app-crypt/acme-0.31.0[${PYTHON_USEDEP}]
-	>=dev-python/zope-interface-5.4.0[${PYTHON_USEDEP}]
-	>=dev-python/urllib3-1.26.4[${PYTHON_USEDEP}]
-	!>=dev-python/urllib3-2.0.0[${PYTHON_USEDEP}]
 	>=dev-python/dns-lexicon-3.2.3[${PYTHON_USEDEP}]
 "
+
+PATCHES=(
+	"${FILESDIR}/${P}-remove-zope.patch"
+	"${FILESDIR}/${P}-remove-urllib-dep.patch"
+)
