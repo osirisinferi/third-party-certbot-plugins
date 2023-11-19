@@ -11,7 +11,7 @@ MY_PN="certbot-plugin-gandi"
 inherit distutils-r1
 
 DESCRIPTION="Gandi LiveDNS Authenticator plugin for Certbot"
-HOMEPAGE="https://pypi.org/project/certbot-dns-gandi/ https://github.com/obynio/certbot-plugin-gandi"
+HOMEPAGE="https://pypi.org/project/certbot-plugin-gandi/ https://github.com/obynio/certbot-plugin-gandi"
 SRC_URI="https://github.com/obynio/${MY_PN}/archive/${PV}.tar.gz -> ${P}.gh.tar.gz"
 
 LICENSE="MIT"
