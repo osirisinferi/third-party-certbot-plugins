@@ -16,7 +16,9 @@ LICENSE="MIT"
 KEYWORDS="~amd64 ~x86"
 
 RDEPEND=""
-DEPEND="virtual/python-cffi[${PYTHON_USEDEP}]
+DEPEND="$(python_gen_cond_dep '
+		    dev-python/cffi[${PYTHON_USEDEP}]
+		' 'python*')
 	${RDEPEND}"
 
 CONFIG_CHECK="~NETFILTER_NETLINK_QUEUE"
