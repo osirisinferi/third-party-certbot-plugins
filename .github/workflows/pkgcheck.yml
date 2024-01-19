@@ -8,6 +8,7 @@ on:
     paths:
       - 'app-crypt/**'
       - 'dev-python/**'
+      - 'net-analyzer/**'
       - '.github/workflows/**'
   pull_request:
     branches:
