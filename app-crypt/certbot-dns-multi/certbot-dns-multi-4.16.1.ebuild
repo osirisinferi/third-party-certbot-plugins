@@ -6,7 +6,7 @@ EAPI=8
 DISTUTILS_EXT=1
 DISTUTILS_USE_PEP517=setuptools
 PYPI_NO_NORMALIZE=1
-PYTHON_COMPAT=( python3_{10..11} )
+PYTHON_COMPAT=( python3_{10..12} )
 
 inherit distutils-r1 pypi
 
@@ -24,9 +24,10 @@ IUSE=""
 DEPEND="
 	>=dev-python/setuptools-scm-7.0.5[${PYTHON_USEDEP}]
 	dev-python/setuptools-golang[${PYTHON_USEDEP}]
-	>=dev-lang/go-1.19.0
+	>=dev-lang/go-1.22.0
 	>=app-crypt/certbot-1.12.0[${PYTHON_USEDEP}]
 	>=app-crypt/acme-1.12.0[${PYTHON_USEDEP}]
+	>=dev-python/josepy-1.1.0[${PYTHON_USEDEP}]
 "
 RDEPEND="${DEPEND}"
 
