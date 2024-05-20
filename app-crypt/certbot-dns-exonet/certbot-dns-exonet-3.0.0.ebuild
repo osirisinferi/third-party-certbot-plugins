@@ -3,9 +3,8 @@
 
 EAPI=8
 
-DISTUTILS_USE_PEP517=setuptools
-PYPI_NO_NORMALIZE=1
-PYTHON_COMPAT=( python3_{10..11} )
+DISTUTILS_USE_PEP517=poetry
+PYTHON_COMPAT=( python3_{10..12} )
 
 inherit distutils-r1 pypi
 
@@ -19,7 +18,6 @@ KEYWORDS="~amd64 ~x86"
 RDEPEND="
 	app-crypt/certbot[${PYTHON_USEDEP}]
 	app-crypt/acme[${PYTHON_USEDEP}]
-	dev-python/zope-interface[${PYTHON_USEDEP}]
 	dev-python/tldextract[${PYTHON_USEDEP}]
 	dev-python/requests[${PYTHON_USEDEP}]
 	>=dev-python/exonetapi-3.0.3[${PYTHON_USEDEP}]
