@@ -1,0 +1,35 @@
+Removes the dependency on zope-interfaces as it was removed from Certbot 2 years ago.
+
+index 8fbaa38..e1995ee 100644
+--- a/certbot_dns_freenom/dns_freenom.py
++++ b/certbot_dns_freenom/dns_freenom.py
+@@ -13,17 +13,13 @@
+ #   limitations under the License.
+
+ """DNS Authenticator for Freenom DNS."""
+-import zope.interface
+ from freenom import Freenom
+
+-from certbot import interfaces
+ from certbot.plugins import dns_common
+
+ ACCOUNT_KEYS_URL = "https://my.Freenom.ru/profile/apikeys"
+
+
+-@zope.interface.implementer(interfaces.IAuthenticator)
+-@zope.interface.provider(interfaces.IPluginFactory)
+ class Authenticator(dns_common.DNSAuthenticator):
+     """DNS Authenticator for Freenom DNS
+
+index 4123f3b..293d53c 100644
+--- a/setup.py
++++ b/setup.py
+@@ -18,7 +18,7 @@ from setuptools import find_packages
+
+ version = "1.3.5"
+
+-install_requires = ["freenom>=0.0.2", "zope.interface"]
++install_requires = ["freenom>=0.0.2"]
+
+ setup(
+     name="certbot-dns-freenom",

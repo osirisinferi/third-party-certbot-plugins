@@ -4,7 +4,7 @@
 EAPI=8
 
 DISTUTILS_USE_PEP517=setuptools
-PYTHON_COMPAT=( python3_{10..11} )
+PYTHON_COMPAT=( python3_{10..12} )
 
 SRC_URI="https://github.com/Shm013/${PN}/archive/v${PV}.tar.gz -> ${P}.gh.tar.gz"
 KEYWORDS="~amd64 ~x86"
@@ -23,3 +23,7 @@ RDEPEND="
 	dev-python/zope-interface[${PYTHON_USEDEP}]
 	>=dev-python/freenom-0.0.2[${PYTHON_USEDEP}]
 "
+
+PATCHES=(
+	"${FILESDIR}"/${P}-remove-zope.patch
+)
