@@ -4,16 +4,16 @@
 EAPI=8
 
 DISTUTILS_USE_PEP517=setuptools
-PYTHON_COMPAT=( python3_{10..12} )
+PYTHON_COMPAT=( python3_{10..13} )
 
 inherit distutils-r1 pypi
 
 DESCRIPTION="Microsoft Authentication Library (MSAL) for Python library"
 HOMEPAGE="https://pypi.org/project/msal"
 
-KEYWORDS="~amd64 ~x86"
 LICENSE="MIT"
 SLOT="0"
+KEYWORDS="~amd64 ~x86"
 
 RDEPEND="
 	>=dev-python/requests-2.20.0[${PYTHON_USEDEP}]

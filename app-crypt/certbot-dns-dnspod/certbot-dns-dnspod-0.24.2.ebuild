@@ -4,7 +4,7 @@
 EAPI=8
 
 DISTUTILS_USE_PEP517=setuptools
-PYTHON_COMPAT=( python3_{10..12} )
+PYTHON_COMPAT=( python3_{10..13} )
 
 EGIT_REPO_URI="https://github.com/tengattack/certbot-dns-dnspod.git"
 EGIT_COMMIT="1991d8177967192c867b135a4c3529c8698ec49b"

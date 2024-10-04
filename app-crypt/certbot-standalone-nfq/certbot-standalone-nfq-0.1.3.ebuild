@@ -11,9 +11,9 @@ inherit distutils-r1 linux-info pypi
 
 DESCRIPTION="Authenticator plugin using NFQUEUE for Certbot (Let's Encrypt Client)"
 HOMEPAGE="https://github.com/alexzorin/certbot-standalone-nfq https://pypi.org/project/certbot-standalone-nfq/"
-KEYWORDS="~amd64 ~x86"
 LICENSE="GPL-2"
 SLOT="0"
+KEYWORDS="~amd64 ~x86"
 
 RDEPEND="
 	>=dev-python/setuptools-scm-7.0.5[${PYTHON_USEDEP}]

@@ -5,11 +5,9 @@ EAPI=8
 
 DISTUTILS_EXT=1
 DISTUTILS_USE_PEP517=setuptools
-PYTHON_COMPAT=( python3_{10..12} )
+PYTHON_COMPAT=( python3_{10..13} )
 
 inherit distutils-r1 pypi
-
-KEYWORDS="~amd64 ~x86"
 
 DESCRIPTION="DNS plugin for Certbot which integrates with the 100+ DNS providers from the lego ACME client"
 HOMEPAGE="https://github.com/alexzorin/certbot-dns-multi https://pypi.org/project/certbot-dns-multi/"
@@ -18,7 +16,7 @@ SRC_URI+="
 
 LICENSE="MIT"
 SLOT="0"
-IUSE=""
+KEYWORDS="~amd64 ~x86"
 
 DEPEND="
 	>=dev-python/setuptools-scm-7.0.5[${PYTHON_USEDEP}]
