@@ -4,15 +4,15 @@
 EAPI=8
 
 DISTUTILS_USE_PEP517=setuptools
-PYTHON_COMPAT=( python3_{10..12} )
+PYTHON_COMPAT=( python3_{10..13} )
 
 inherit distutils-r1 linux-info pypi
 
 DESCRIPTION="Fast python library encapsulating the nfqueue netlink interface"
 HOMEPAGE="https://pypi.org/project/fnfqueue/ https://github.com/notti/fnfqueue/"
 
-SLOT="0"
 LICENSE="MIT"
+SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
 RDEPEND=""

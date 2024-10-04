@@ -4,17 +4,16 @@
 EAPI=8
 
 DISTUTILS_USE_PEP517=poetry
-PYTHON_COMPAT=( python3_{10..12} )
+PYTHON_COMPAT=( python3_{10..13} )
 
 inherit distutils-r1 pypi
 
 DESCRIPTION="Python 3 library for the Exonet API"
 HOMEPAGE="https://pypi.org/project/exonetapi/ https://github.com/exonet/exonet-api-python"
 
-SLOT="0"
 LICENSE="MIT"
+SLOT="0"
 KEYWORDS="~amd64 ~x86"
-
 RESTRICT="test"
 
 RDEPEND="

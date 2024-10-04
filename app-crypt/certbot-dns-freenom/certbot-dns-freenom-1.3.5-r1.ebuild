@@ -4,18 +4,17 @@
 EAPI=8
 
 DISTUTILS_USE_PEP517=setuptools
-PYTHON_COMPAT=( python3_{10..12} )
-
-SRC_URI="https://github.com/Shm013/${PN}/archive/v${PV}.tar.gz -> ${P}.gh.tar.gz"
-KEYWORDS="~amd64 ~x86"
+PYTHON_COMPAT=( python3_{10..13} )
 
 inherit distutils-r1
 
 DESCRIPTION="Freenom DNS Authenticator plugin for Certbot (Let's Encrypt Client)"
 HOMEPAGE="https://github.com/Shm013/certbot-dns-freenom"
+SRC_URI="https://github.com/Shm013/${PN}/archive/v${PV}.tar.gz -> ${P}.gh.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
+KEYWORDS="~amd64 ~x86"
 
 RDEPEND="
 	>=app-crypt/certbot-1.17.0[${PYTHON_USEDEP}]
