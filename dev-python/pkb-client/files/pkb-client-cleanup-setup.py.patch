@@ -1,0 +1,20 @@
+diff --git a/setup.py b/setup.py
+index d1c8f04..5f73c87 100644
+--- a/setup.py
++++ b/setup.py
+@@ -1,13 +1,10 @@
+ from setuptools import setup, find_packages
+ 
+-import pkb_client
+-
+-with open("Readme.md") as f:
+-    long_description = f.read()
++long_description = ""
+ 
+ setup(
+     name="pkb_client",
+-    version=pkb_client.__version__,
++    version="v2.0.0",
+     author="infinityofspace",
+     url="https://github.com/infinityofspace/pkb_client",
+     description="Python client for the Porkbun API",
