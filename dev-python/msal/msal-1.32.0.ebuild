@@ -21,7 +21,7 @@ RDEPEND="
 	>=dev-python/pyjwt-1.7.1[${PYTHON_USEDEP}]
 	<dev-python/pyjwt-3.0.0[${PYTHON_USEDEP}]
 	>=dev-python/cryptography-0.6.0[${PYTHON_USEDEP}]
-	<dev-python/cryptography-44.0.0[${PYTHON_USEDEP}]
+	<dev-python/cryptography-47.0.0[${PYTHON_USEDEP}]
 "
 
 DEPEND="${RDEPEND}"
