@@ -18,7 +18,6 @@ KEYWORDS="~amd64 ~x86"
 
 RDEPEND="
 	>=app-crypt/certbot-1.17.0[${PYTHON_USEDEP}]
-	>=app-crypt/acme-1.17.0[${PYTHON_USEDEP}]
 	dev-python/zope-interface[${PYTHON_USEDEP}]
 	>=dev-python/freenom-0.0.2[${PYTHON_USEDEP}]
 "

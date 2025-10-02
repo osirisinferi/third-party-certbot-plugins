@@ -23,7 +23,6 @@ DEPEND="
 	dev-python/setuptools-golang[${PYTHON_USEDEP}]
 	>=dev-lang/go-1.22.0
 	>=app-crypt/certbot-1.12.0[${PYTHON_USEDEP}]
-	>=app-crypt/acme-1.12.0[${PYTHON_USEDEP}]
 	>=dev-python/josepy-1.1.0[${PYTHON_USEDEP}]
 "
 RDEPEND="${DEPEND}"

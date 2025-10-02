@@ -18,7 +18,6 @@ KEYWORDS="~amd64 ~x86"
 
 RDEPEND="
 	>=app-crypt/certbot-2.0.0[${PYTHON_USEDEP}]
-	>=app-crypt/acme-2.0.0[${PYTHON_USEDEP}]
 	>=dev-python/azure-identity-1.13.0[${PYTHON_USEDEP}]
 	>=dev-python/azure-mgmt-dns-8.0.0[${PYTHON_USEDEP}]
 	>=dev-python/azure-core-1.25.0[${PYTHON_USEDEP}]

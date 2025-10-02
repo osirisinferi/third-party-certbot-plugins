@@ -20,7 +20,6 @@ PATCHES="${FILESDIR}/${PN}-remove-mock-dep.patch"
 
 RDEPEND="
 	>=app-crypt/certbot-2.1.0[${PYTHON_USEDEP}]
-	>=app-crypt/acme-0.21.1[${PYTHON_USEDEP}]
 	>=dev-python/dnslib-0.9.0[${PYTHON_USEDEP}]
 "
 

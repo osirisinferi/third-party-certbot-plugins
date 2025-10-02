@@ -17,7 +17,6 @@ KEYWORDS="~amd64 ~x86"
 
 RDEPEND="
 	app-crypt/certbot[${PYTHON_USEDEP}]
-	app-crypt/acme[${PYTHON_USEDEP}]
 	dev-python/tldextract[${PYTHON_USEDEP}]
 	dev-python/requests[${PYTHON_USEDEP}]
 	>=dev-python/exonetapi-3.0.3[${PYTHON_USEDEP}]

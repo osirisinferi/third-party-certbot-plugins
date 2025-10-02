@@ -18,7 +18,6 @@ KEYWORDS="~amd64 ~x86"
 RDEPEND="
 	>=dev-python/setuptools-scm-7.0.5[${PYTHON_USEDEP}]
 	>=app-crypt/certbot-1.25.0[${PYTHON_USEDEP}]
-	>=app-crypt/acme-1.25.0[${PYTHON_USEDEP}]
 	net-analyzer/scapy[${PYTHON_USEDEP}]
 	net-analyzer/fnfqueue[${PYTHON_USEDEP}]
 	dev-python/pyroute2[${PYTHON_USEDEP}]

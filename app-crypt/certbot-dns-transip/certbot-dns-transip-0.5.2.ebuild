@@ -17,7 +17,6 @@ KEYWORDS="~amd64 ~x86"
 
 RDEPEND="
 	>=app-crypt/certbot-0.16.0[${PYTHON_USEDEP}]
-	>=app-crypt/acme-0.16.0[${PYTHON_USEDEP}]
 	~dev-python/python-transip-0.6.0[${PYTHON_USEDEP}]
 "
 
